@@ -1,0 +1,371 @@
+/* ===== SECCIÓN FORMACIÓN ===== */
+
+.formacion {
+    padding: var(--section-padding) 0;
+    background: var(--bg-white);
+    position: relative;
+}
+
+.formacion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 49%, rgba(var(--primary-rgb), 0.02) 50%, transparent 51%);
+    pointer-events: none;
+}
+
+/* Grid de formación */
+.formacion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+/* Tarjetas de formación */
+.formacion-card {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-light);
+    transition: var(--transition-smooth);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.formacion-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Imagen de la tarjeta */
+.formacion-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: var(--gradient-primary);
+}
+
+.formacion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.formacion-card:hover .formacion-image img {
+    transform: scale(1.1);
+}
+
+/* Overlay de la imagen */
+.formacion-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.8) 0%, rgba(var(--secondary-rgb), 0.8) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.formacion-card:hover .formacion-overlay {
+    opacity: 1;
+}
+
+.formacion-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transform: scale(0.8);
+    transition: var(--transition-smooth);
+}
+
+.formacion-card:hover .formacion-icon {
+    transform: scale(1);
+}
+
+.formacion-icon svg {
+    width: 40px;
+    height: 40px;
+    color: var(--text-white);
+}
+
+/* Contenido de la tarjeta */
+.formacion-content {
+    padding: var(--spacing-xl);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formacion-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.3;
+}
+
+.formacion-description {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    flex: 1;
+}
+
+/* Características */
+.formacion-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    background: var(--bg-light);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-light);
+}
+
+.feature-item svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+/* Acciones de la tarjeta */
+.formacion-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+}
+
+.formacion-actions .btn {
+    flex: 1;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.formacion-actions .btn svg {
+    width: 18px;
+    height: 18px;
+    transition: var(--transition-smooth);
+}
+
+.formacion-actions .btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Variaciones de color */
+.formacion-card.diplomados .formacion-overlay {
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.9) 0%, rgba(var(--accent-rgb), 0.9) 100%);
+}
+
+.formacion-card.cursos .formacion-overlay {
+    background: linear-gradient(135deg, rgba(var(--secondary-rgb), 0.9) 0%, rgba(var(--primary-rgb), 0.9) 100%);
+}
+
+/* Efectos de hover en botones */
+.formacion-actions .btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.formacion-actions .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition-smooth);
+}
+
+.formacion-actions .btn-primary:hover::before {
+    left: 100%;
+}
+
+.formacion-actions .btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.formacion-actions .btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--primary-color);
+    transition: var(--transition-smooth);
+    z-index: -1;
+}
+
+.formacion-actions .btn-outline:hover {
+    color: var(--text-white);
+}
+
+.formacion-actions .btn-outline:hover::before {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .formacion-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .formacion-image {
+        height: 200px;
+    }
+    
+    .formacion-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .formacion-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .formacion-description {
+        font-size: var(--font-size-sm);
+    }
+    
+    .formacion-actions {
+        flex-direction: column;
+    }
+    
+    .feature-item {
+        font-size: var(--font-size-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .formacion {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .formacion-content {
+        padding: var(--spacing-md);
+    }
+    
+    .formacion-image {
+        height: 180px;
+    }
+    
+    .formacion-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .formacion-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .formacion-features {
+        gap: var(--spacing-xs);
+    }
+    
+    .feature-item {
+        padding: var(--spacing-xs);
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* Estados de carga para imágenes */
+.formacion-image img[src=""],
+.formacion-image img:not([src]) {
+    display: none;
+}
+
+.formacion-image img[onerror] {
+    background: var(--gradient-primary);
+}
+
+/* Animaciones específicas */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formacion-card {
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+.formacion-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    .formacion {
+        background: var(--bg-dark);
+    }
+    
+    .formacion-card {
+        background: var(--bg-darker);
+        border-color: var(--border-dark);
+    }
+    
+    .formacion-title {
+        color: var(--text-white);
+    }
+    
+    .formacion-description {
+        color: var(--text-light);
+    }
+    
+    .feature-item {
+        background: var(--bg-dark);
+        border-color: var(--border-dark);
+        color: var(--text-light);
+    }
+    
+    .formacion-actions .btn-outline {
+        border-color: var(--primary-light);
+        color: var(--primary-light);
+    }
+    
+    .formacion-actions .btn-outline:hover {
+        background: var(--primary-light);
+        color: var(--text-dark);
+    }
+}

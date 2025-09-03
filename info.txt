@@ -1,0 +1,94 @@
+index1
+
+Lo que necesito es que la página sea informativa, tenga directo enlace a redes sociales y WhatsApp, se .cl y .com
+
+al lado del logo debe de ir escrito el nombre ARCIS
+
+ARCIS – Academia de Investigación en Riesgos, Inteligencia y Seguridad
+
+
+Misión
+
+Formar, capacitar e investigar en el ámbito de los riesgos, la inteligencia y la seguridad, entregando herramientas innovadoras y de excelencia académica que fortalezcan la prevención, la gestión estratégica y la toma de decisiones en instituciones públicas, privadas y sociales en toda Latinoamérica.
+
+Visión
+
+Ser la academia de referencia en Latinoamérica en investigación, formación y asesoría en riesgos, inteligencia y seguridad, consolidándonos como un centro de conocimiento de alto nivel que impulse redes de cooperación, innovación y soluciones efectivas para los desafíos de seguridad de la región.
+
+Valores Institucionales
+Excelencia: Compromiso con la calidad académica, investigativa y profesional en cada una de nuestras acciones.
+
+Ética: Actuar con integridad, responsabilidad y respeto en la generación y aplicación del conocimiento.
+
+Innovación: Impulsar nuevas metodologías, tecnologías y enfoques para enfrentar los desafíos en riesgos, inteligencia y seguridad.
+
+Colaboración: Fomentar redes de cooperación entre países, instituciones y especialistas de toda Latinoamérica.
+
+Impacto Social: Contribuir al fortalecimiento de comunidades e instituciones, promoviendo seguridad integral y desarrollo sostenible.
+
+Transparencia: Mantener claridad en nuestros procesos, relaciones y resultados.
+
+Compromiso Regional: Responder a las realidades y desafíos propios de Latinoamérica, con soluciones pertinentes y culturalmente sensibles.
+
+¿Quieres que te los redacte en un formato corporativo breve (tipo folleto institucional o web) o prefieres mantenerlos como lista conceptual para trabajar internamente?
+
+
+
+Descripción de Servicios – ARCIS
+En ARCIS ofrecemos soluciones integrales en el ámbito de los riesgos, la inteligencia y la seguridad, orientadas a instituciones públicas, privadas y organizaciones sociales en toda Latinoamérica. Nuestros servicios se estructuran en cuatro ejes principales:
+
+esta informacion va en cards (este debe de tener imagen, titulo y texto) dentro de una seccion carrusel.
+
+🔹 1. Asesoría Estratégica
+Consultorías personalizadas en gestión de riesgos, seguridad pública y privada, y sistemas de inteligencia aplicada.
+
+Diseño de planes estratégicos de prevención y respuesta para empresas, instituciones y gobiernos locales.
+
+Implementación de modelos de seguridad integral adaptados al contexto latinoamericano.
+
+🔹 2. Investigación Especializada
+Estudios en tendencias delictuales, crimen organizado, ciberseguridad y riesgos emergentes.
+
+Desarrollo de informes técnicos y documentos de análisis para la toma de decisiones.
+
+Generación de conocimiento aplicado a la seguridad ciudadana y corporativa.
+
+🔹 3. Encuestas y Diagnósticos
+Levantamiento de información mediante encuestas y estudios de percepción en comunidades y organizaciones.
+
+Diagnósticos de clima de seguridad, percepción de riesgo y evaluación de políticas públicas.
+
+Análisis estadístico y propuestas de mejora basadas en evidencia.
+
+🔹 4. Formación Académica y Profesional
+Programas de alto nivel para el fortalecimiento de capacidades en toda la región.
+
+
+
+Diplomados :
+
+la informacion a continuacion debe de ir en un boton modal que "diga ver mas"
+
+Diplomado en Inteligencia y Contrainteligencia Estratégica.
+
+Diplomado en Gestión de Riesgos y Seguridad Corporativa.
+
+Diplomado en Criminología y Prevención del Delito.
+
+Diplomado en Ciberseguridad y Protección de la Información.
+
+Diplomado en Seguridad Pública y Políticas de Prevención.
+
+Diplomado en Análisis Geopolítico y Seguridad Regional.
+
+Cursos de Especialización:
+
+la informacion a continuacion debe de ir en un boton modal que "diga ver mas"
+
+Curso de Percepción y Evaluación del Riesgo.
+
+Curso de Técnicas de Análisis Criminal y Prospectiva.
+
+Curso de Gestión de Crisis y Continuidad Operacional.
+
+Curso de Seguridad Comunitaria y Participación Ciudadana.

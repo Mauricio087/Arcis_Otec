@@ -1,0 +1,517 @@
+/* ===== SECCIÓN SERVICIOS ===== */
+#servicios {
+    background: var(--color-light);
+    position: relative;
+    overflow: hidden;
+}
+
+#servicios::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.05) 0%, rgba(49, 130, 206, 0.05) 100%);
+    pointer-events: none;
+}
+
+.servicios-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    position: relative;
+    z-index: 2;
+}
+
+.servicios-title {
+    font-size: var(--font-size-4xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.servicios-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.servicios-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== CARRUSEL DE SERVICIOS ===== */
+.carousel-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform var(--transition-slow);
+    will-change: transform;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.service-card {
+    display: flex;
+    align-items: stretch;
+    gap: var(--spacing-xl);
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    width: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.service-image {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 250px;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    position: relative;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 54, 93, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    color: var(--color-white);
+}
+
+.service-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.service-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg) 0;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.service-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.service-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    transition: var(--transition-normal);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+}
+
+.service-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.service-cta svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ===== CONTROLES DEL CARRUSEL ===== */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(26, 54, 93, 0.9);
+    color: var(--color-white);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.carousel-controls:hover {
+    background: var(--color-primary);
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+}
+
+.carousel-btn-prev {
+    left: var(--spacing-lg);
+}
+
+.carousel-btn-next {
+    right: var(--spacing-lg);
+}
+
+.carousel-controls svg,
+.carousel-btn-prev svg,
+.carousel-btn-next svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Botón de play/pause */
+.carousel-play-pause {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    z-index: 10;
+}
+
+.carousel-play-pause-btn {
+    background: rgba(26, 54, 93, 0.9);
+    color: var(--color-white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.carousel-play-pause-btn:hover {
+    background: var(--color-primary);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.carousel-play-pause-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.carousel-play-pause-btn .pause-icon {
+    display: none;
+}
+
+.carousel-play-pause-btn.playing .play-icon {
+    display: none;
+}
+
+.carousel-play-pause-btn.playing .pause-icon {
+    display: block;
+}
+
+/* ===== INDICADORES ===== */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border: none;
+    opacity: 0.7;
+}
+
+.carousel-indicator.active {
+    background: var(--color-white);
+    transform: scale(1.3);
+    opacity: 1;
+}
+
+.carousel-indicator:hover {
+    background: var(--color-white);
+    opacity: 0.9;
+}
+
+/* ===== PROGRESS BAR ===== */
+.carousel-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transition: width var(--transition-slow);
+    border-radius: 0 2px 0 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .service-card {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-xl);
+        gap: var(--spacing-lg);
+    }
+    
+    .service-content {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .service-image {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .carousel-controls,
+    .carousel-btn-prev,
+    .carousel-btn-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-prev {
+        left: var(--spacing-sm);
+    }
+    
+    .carousel-next {
+        right: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .carousel-slide {
+        padding: var(--spacing-md);
+    }
+    
+    .slide-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .slide-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .slide-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .servicios-carousel {
+        margin: 0 var(--spacing-sm);
+        border-radius: var(--border-radius-lg);
+    }
+    
+    .carousel-slide {
+        padding: var(--spacing-sm);
+    }
+    
+    .service-card {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .slide-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .slide-cta {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .carousel-controls {
+        display: none;
+    }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-slide.active .slide-content {
+    animation: slideIn 0.6s ease-out;
+}
+
+.carousel-slide.active .slide-image {
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* ===== EFECTOS ESPECIALES ===== */
+.carousel-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.carousel-slide:hover::before {
+    left: 100%;
+}
+
+/* ===== AUTOPLAY INDICATOR ===== */
+.carousel-autoplay-indicator {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.autoplay-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-white);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
