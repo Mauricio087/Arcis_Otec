@@ -30,11 +30,9 @@ Transparencia: Mantener claridad en nuestros procesos, relaciones y resultados.
 
 Compromiso Regional: Responder a las realidades y desafíos propios de Latinoamérica, con soluciones pertinentes y culturalmente sensibles.
 
-¿Quieres que te los redacte en un formato corporativo breve (tipo folleto institucional o web) o prefieres mantenerlos como lista conceptual para trabajar internamente?
 
+Descripción de Servicios – ARCIS:
 
-
-Descripción de Servicios – ARCIS
 En ARCIS ofrecemos soluciones integrales en el ámbito de los riesgos, la inteligencia y la seguridad, orientadas a instituciones públicas, privadas y organizaciones sociales en toda Latinoamérica. Nuestros servicios se estructuran en cuatro ejes principales:
 
 esta informacion va en cards (este debe de tener imagen, titulo y texto) dentro de una seccion carrusel.

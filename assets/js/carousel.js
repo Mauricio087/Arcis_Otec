@@ -61,10 +61,10 @@ class ARCISCarousel {
                         ${this.createSlidesHTML()}
                     </div>
                 </div>
-                
+
                 ${this.config.showControls ? this.createControlsHTML() : ''}
                 ${this.config.showIndicators ? this.createIndicatorsHTML() : ''}
-                
+
                 <div class="carousel-play-pause">
                     <button class="carousel-play-pause-btn" title="Pausar/Reproducir">
                         <svg class="play-icon" viewBox="0 0 24 24">
@@ -100,15 +100,16 @@ class ARCISCarousel {
     }
     
     createSlidesHTML() {
-        // Datos de servicios de ARCIS
-        const servicios = [
+        // Datos de servicios y diplomados de ARCIS
+        const slides = [
             {
                 titulo: 'Asesoría Estratégica',
                 descripcion: 'Consultoría especializada en gestión de riesgos, inteligencia y seguridad para organizaciones públicas y privadas.',
                 imagen: './assets/img/servicios/asesoria.jpg',
                 icono: 'strategy',
                 ctaText: 'Solicitar Asesoría',
-                ctaAction: 'asesoria'
+                ctaAction: 'asesoria',
+                tipo: 'servicio'
             },
             {
                 titulo: 'Investigación Especializada',
@@ -116,7 +117,8 @@ class ARCISCarousel {
                 imagen: './assets/img/servicios/investigacion.jpg',
                 icono: 'research',
                 ctaText: 'Conocer Más',
-                ctaAction: 'investigacion'
+                ctaAction: 'investigacion',
+                tipo: 'servicio'
             },
             {
                 titulo: 'Encuestas y Diagnósticos',
@@ -124,7 +126,8 @@ class ARCISCarousel {
                 imagen: './assets/img/servicios/encuestas.jpg',
                 icono: 'survey',
                 ctaText: 'Solicitar Diagnóstico',
-                ctaAction: 'encuestas'
+                ctaAction: 'encuestas',
+                tipo: 'servicio'
             },
             {
                 titulo: 'Formación Académica',
@@ -132,42 +135,117 @@ class ARCISCarousel {
                 imagen: './assets/img/servicios/formacion.jpg',
                 icono: 'education',
                 ctaText: 'Ver Programas',
-                ctaAction: 'formacion'
+                ctaAction: 'formacion',
+                tipo: 'servicio'
+            },
+            {
+                titulo: 'Diplomado en Seguridad Pública',
+                descripcion: 'Formación integral en políticas públicas de seguridad, prevención del delito y gestión de crisis.',
+                imagen: './assets/img/formacion/diplomados.jpg',
+                icono: 'education',
+                ctaText: 'Ver Diplomados',
+                ctaAction: 'diplomados',
+                tipo: 'diplomado',
+                duracion: '6 meses',
+                certificacion: 'Certificación Universitaria'
+            },
+            {
+                titulo: 'Diplomado en Inteligencia Criminal',
+                descripcion: 'Especialización en análisis de información, investigación criminal y técnicas avanzadas de inteligencia.',
+                imagen: './assets/img/formacion/diplomados.jpg',
+                icono: 'research',
+                ctaText: 'Ver Diplomados',
+                ctaAction: 'diplomados',
+                tipo: 'diplomado',
+                duracion: '8 meses',
+                certificacion: 'Certificación Universitaria'
             }
         ];
         
-        return servicios.map((servicio, index) => `
-            <div class="carousel-slide" data-slide="${index}">
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="${servicio.imagen}" alt="${servicio.titulo}" loading="lazy" onerror="this.src='./assets/img/servicios/default.jpg'">
-                        <div class="service-overlay">
-                            <div class="service-icon">
-                                ${this.getServiceIcon(servicio.icono)}
+        return slides.map((slide, index) => {
+            if (slide.tipo === 'servicio') {
+                return `
+                    <div class="carousel-slide" data-slide="${index}">
+                        <div class="service-card">
+                            <div class="service-image">
+                                <img src="${slide.imagen}" alt="${slide.titulo}" loading="lazy" onerror="this.src='./assets/img/servicios/default.jpg'">
+                                <div class="service-overlay">
+                                    <div class="service-icon">
+                                        ${this.getServiceIcon(slide.icono)}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="service-content">
+                                <h3 class="service-title">${slide.titulo}</h3>
+                                <p class="service-description">${slide.descripcion}</p>
+                                
+                                <div class="service-actions">
+                                    <button class="btn btn-primary service-cta" data-whatsapp="${slide.ctaAction}">
+                                        ${slide.ctaText}
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                        </svg>
+                                    </button>
+                                    
+                                    <button class="btn btn-outline service-modal" data-modal="modal-${slide.ctaAction}">
+                                        Más Información
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="service-content">
-                        <h3 class="service-title">${servicio.titulo}</h3>
-                        <p class="service-description">${servicio.descripcion}</p>
-                        
-                        <div class="service-actions">
-                            <button class="btn btn-primary service-cta" data-whatsapp="${servicio.ctaAction}">
-                                ${servicio.ctaText}
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                                </svg>
-                            </button>
+                `;
+            } else if (slide.tipo === 'diplomado') {
+                return `
+                    <div class="carousel-slide" data-slide="${index}">
+                        <div class="service-card diplomado-card">
+                            <div class="service-image">
+                                <img src="${slide.imagen}" alt="${slide.titulo}" loading="lazy" onerror="this.src='./assets/img/formacion/default.jpg'">
+                                <div class="service-overlay">
+                                    <div class="service-icon">
+                                        ${this.getServiceIcon(slide.icono)}
+                                    </div>
+                                </div>
+                            </div>
                             
-                            <button class="btn btn-outline service-modal" data-modal="modal-${servicio.ctaAction}">
-                                Más Información
-                            </button>
+                            <div class="service-content">
+                                <h3 class="service-title">${slide.titulo}</h3>
+                                <p class="service-description">${slide.descripcion}</p>
+                                
+                                <div class="service-features">
+                                    <span class="feature-item">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M17 13H11V7H12.5V11.5H17V13Z"/>
+                                        </svg>
+                                        ${slide.duracion}
+                                    </span>
+                                    <span class="feature-item">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                        </svg>
+                                        ${slide.certificacion}
+                                    </span>
+                                </div>
+                                
+                                <div class="service-actions">
+                                    <button class="btn btn-primary service-cta" data-modal="modal-${slide.ctaAction}">
+                                        ${slide.ctaText}
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                        </svg>
+                                    </button>
+                                    
+                                    <button class="btn btn-outline service-modal" data-whatsapp="${slide.ctaAction}">
+                                        Consultar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        `).join('');
+                `;
+            }
+        }).join('');
     }
     
     createControlsHTML() {
@@ -187,7 +265,7 @@ class ARCISCarousel {
     }
     
     createIndicatorsHTML() {
-        const indicatorsCount = 4; // Número de servicios
+        const indicatorsCount = 6; // Número de servicios + diplomados
         const indicators = Array.from({ length: indicatorsCount }, (_, index) => 
             `<button class="carousel-indicator" data-slide="${index}" title="Ir a slide ${index + 1}"></button>`
         ).join('');

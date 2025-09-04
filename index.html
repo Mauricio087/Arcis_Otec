@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/hero.css">
-    <link rel="stylesheet" href="./assets/css/quienes-somos.css">
+    <link rel="stylesheet" href="./assets/css/mision-vision.css">
+    <link rel="stylesheet" href="./assets/css/valores.css">
     <link rel="stylesheet" href="./assets/css/servicios.css">
     <link rel="stylesheet" href="./assets/css/formacion.css">
     <link rel="stylesheet" href="./assets/css/modals.css">
@@ -26,8 +27,7 @@
             <div class="container">
                 <div class="navbar-brand">
                     <a href="#" class="brand-link">
-                        <img src="./assets/img/logo/logo.jpeg" alt="ARCIS OTEC" class="brand-logo" width="100" height="100" loading="eager" onerror="this.style.display='none'">
-                        <span class="brand-text">ARCIS OTEC</span>
+                        <img src="./assets/img/logo/logo.jpeg" alt="ARCIS OTEC" class="brand-logo" width="40" height="40" loading="eager" onerror="this.style.display='none'">
                     </a>
                 </div>
                 
@@ -41,14 +41,7 @@
                                 Inicio
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#quienes-somos" class="nav-link" data-scroll="quienes-somos">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                </svg>
-                                Quiénes Somos
-                            </a>
-                        </li>
+
                         <li class="nav-item">
                             <a href="#servicios" class="nav-link" data-scroll="servicios">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -76,8 +69,16 @@
                                 </svg>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="index2.html" class="dropdown-link">Doctor Honoris Causa</a></li>
-                                <li><a href="index3.html" class="dropdown-link">Certificaciones Especiales</a></li>
+                                <li class="dropdown-item">
+                                    <a href="doctor.html" class="dropdown-link">
+                                        Doctor Honoris Causa
+                                    </a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="document.html" class="dropdown-link">
+                                        Certificaciones Especiales
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -155,59 +156,117 @@
         </div>
     </section>
 
-    <!-- Quiénes Somos Section -->
-    <section id="quienes-somos" class="quienes-somos">
+    <!-- Misión y Visión Section -->
+    <section id="mision-vision" class="mision-vision">
+        <div class="container">
+            <div class="mision-vision-content">
+                <div class="mision-vision-item" data-animate="fadeInUp">
+                    <div class="mision-vision-header">
+                        <div class="mision-vision-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="mision-vision-title">Misión</h3>
+                    </div>
+                    <p class="mision-vision-description">
+                        Formar, capacitar e investigar en el ámbito de los riesgos, la inteligencia y la seguridad, entregando herramientas innovadoras y de excelencia académica que fortalezcan la prevención, la gestión estratégica y la toma de decisiones en instituciones públicas, privadas y sociales en toda Latinoamérica.
+                    </p>
+                </div>
+                
+                <div class="mision-vision-item" data-animate="fadeInUp">
+                    <div class="mision-vision-header">
+                        <div class="mision-vision-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="mision-vision-title">Visión</h3>
+                    </div>
+                    <p class="mision-vision-description">
+                        Ser la academia de referencia en Latinoamérica en investigación, formación y asesoría en riesgos, inteligencia y seguridad, consolidándonos como un centro de conocimiento de alto nivel que impulse redes de cooperación, innovación y soluciones efectivas para los desafíos de seguridad de la región.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores Institucionales Section -->
+    <section id="valores" class="valores">
         <div class="container">
             <div class="section-header" data-animate="fadeInUp">
-                <h2 class="section-title">Quiénes Somos</h2>
-                <p class="section-subtitle">
-                    Conoce nuestra misión, visión y valores institucionales que nos guían en la excelencia académica.
-                </p>
+                <h2 class="section-title">Valores Institucionales</h2>
             </div>
             
-            <div class="about-grid">
-                <div class="about-card mission" data-animate="fadeInLeft">
-                    <div class="about-icon">
+            <div class="valores-grid">
+                <div class="valor-item" data-animate="fadeInUp">
+                    <div class="valor-icon">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                     </div>
-                    <h3 class="about-title">Nuestra Misión</h3>
-                    <p class="about-description">
-                        Formar profesionales de excelencia en el ámbito de la seguridad pública, inteligencia y gestión de riesgos, 
-                        a través de programas académicos innovadores y de alta calidad, contribuyendo al desarrollo de capacidades 
-                        estratégicas para la seguridad en América Latina.
-                    </p>
+                    <h3 class="valor-title">Excelencia</h3>
+                    <p class="valor-description">Compromiso con la calidad académica, investigativa y profesional en cada una de nuestras acciones.</p>
                 </div>
                 
-                <div class="about-card vision" data-animate="fadeInUp">
-                    <div class="about-icon">
+                <div class="valor-item" data-animate="fadeInUp">
+                    <div class="valor-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="valor-title">Ética</h3>
+                    <p class="valor-description">Actuar con integridad, responsabilidad y respeto en la generación y aplicación del conocimiento.</p>
+                </div>
+                
+                <div class="valor-item" data-animate="fadeInUp">
+                    <div class="valor-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 11H7v9a2 2 0 002 2h8a2 2 0 002-2V9h-2m-1-1V6a4 4 0 00-8 0v2H5a1 1 0 00-1 1v10a3 3 0 003 3h8a3 3 0 003-3V9a1 1 0 00-1-1h-1zM8.5 6a2.5 2.5 0 015 0v2h-5V6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="valor-title">Innovación</h3>
+                    <p class="valor-description">Impulsar nuevas metodologías, tecnologías y enfoques para enfrentar los desafíos en riesgos, inteligencia y seguridad.</p>
+                </div>
+                
+                <div class="valor-item" data-animate="fadeInUp">
+                    <div class="valor-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2M4 1v3h4l2 7h3.5c.83 0 1.5.67 1.5 1.5S14.33 14 13.5 14H9l.5 2H15v2H6c-.55 0-1-.45-1-1 0-.17.04-.34.12-.5L7.1 11H5V9h2.1L9 4H4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="valor-title">Colaboración</h3>
+                    <p class="valor-description">Fomentar redes de cooperación entre países, instituciones y especialistas de toda Latinoamérica.</p>
+                </div>
+                
+                <div class="valor-item" data-animate="fadeInUp">
+                    <div class="valor-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="valor-title">Impacto Social</h3>
+                    <p class="valor-description">Contribuir al fortalecimiento de comunidades e instituciones, promoviendo seguridad integral y desarrollo sostenible.</p>
+                </div>
+                
+                <div class="valor-item" data-animate="fadeInUp">
+                    <div class="valor-icon">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
                         </svg>
                     </div>
-                    <h3 class="about-title">Nuestra Visión</h3>
-                    <p class="about-description">
-                        Ser la institución académica de referencia en América Latina en formación especializada en seguridad pública, 
-                        inteligencia y gestión de riesgos, reconocida por la excelencia de sus programas, la calidad de su investigación 
-                        y su contribución al fortalecimiento de la seguridad regional.
-                    </p>
+                    <h3 class="valor-title">Transparencia</h3>
+                    <p class="valor-description">Mantener claridad en nuestros procesos, relaciones y resultados.</p>
                 </div>
                 
-                <div class="about-card values" data-animate="fadeInRight">
-                    <div class="about-icon">
+                <div class="valor-item" data-animate="fadeInUp">
+                    <div class="valor-icon">
                         <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M12 7C13.11 7 14 7.89 14 9C14 10.11 13.11 11 12 11C10.89 11 10 10.11 10 9C10 7.89 10.89 7 12 7M18 17H6V15.5C6 13.83 9.33 13 12 13S18 13.83 18 15.5V17Z"/>
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                         </svg>
                     </div>
-                    <h3 class="about-title">Valores Institucionales</h3>
-                    <ul class="values-list">
-                        <li><strong>Excelencia Académica:</strong> Compromiso con la más alta calidad educativa</li>
-                        <li><strong>Integridad:</strong> Transparencia y ética en todas nuestras acciones</li>
-                        <li><strong>Innovación:</strong> Desarrollo de metodologías y enfoques vanguardistas</li>
-                        <li><strong>Compromiso Social:</strong> Contribución al bienestar y seguridad de la sociedad</li>
-                        <li><strong>Colaboración:</strong> Trabajo conjunto con instituciones nacionales e internacionales</li>
-                    </ul>
+                    <h3 class="valor-title">Compromiso Regional</h3>
+                    <p class="valor-description">Responder a las realidades y desafíos propios de Latinoamérica, con soluciones pertinentes y culturalmente sensibles.</p>
                 </div>
             </div>
         </div>
@@ -240,54 +299,7 @@
             </div>
             
             <div class="formacion-grid">
-                <div class="formacion-card diplomados" data-animate="fadeInLeft">
-                    <div class="formacion-image">
-                        <img src="./assets/img/formacion/diplomados.jpg" alt="Diplomados ARCIS" loading="lazy" onerror="this.src='./assets/img/formacion/default.jpg'">
-                        <div class="formacion-overlay">
-                            <div class="formacion-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6L23 9l-11-6m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="formacion-content">
-                        <h3 class="formacion-title">Diplomados</h3>
-                        <p class="formacion-description">
-                            Programas de especialización avanzada en seguridad pública, inteligencia criminal y gestión de riesgos. 
-                            Formación integral con certificación universitaria y prácticas profesionales.
-                        </p>
-                        
-                        <div class="formacion-features">
-                            <span class="feature-item">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M17 13H11V7H12.5V11.5H17V13Z"/>
-                                </svg>
-                                5-8 meses
-                            </span>
-                            <span class="feature-item">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                                </svg>
-                                Certificación Universitaria
-                            </span>
-                        </div>
-                        
-                        <div class="formacion-actions">
-                            <button class="btn btn-primary" data-modal="modal-diplomados">
-                                Ver Diplomados
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                                </svg>
-                            </button>
-                            
-                            <button class="btn btn-outline" data-whatsapp="diplomados">
-                                Consultar
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <!-- La sección de diplomados se ha movido al carrusel de servicios -->
                 
                 <div class="formacion-card cursos" data-animate="fadeInRight">
                     <div class="formacion-image">
@@ -342,7 +354,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="footer">
+    <footer id="footer">
         <div class="footer-background">
             <div class="footer-overlay"></div>
         </div>
@@ -351,8 +363,7 @@
             <div class="footer-content">
                 <div class="footer-section footer-brand">
                     <div class="footer-logo">
-                        <img src="./assets/img/logo/logo.jpeg" alt="ARCIS OTEC" class="footer-logo-img" width="100" height="100" loading="lazy" onerror="this.style.display='none'">
-                        <span class="footer-brand-text">ARCIS OTEC</span>
+                        <img src="./assets/img/logo/logo.jpeg" alt="ARCIS OTEC" class="footer-logo-img" width="40" height="40" loading="lazy" onerror="this.style.display='none'">
                     </div>
                     
                     <p class="footer-description">
@@ -390,11 +401,10 @@
                 <div class="footer-section footer-links">
                     <h3 class="footer-title">Enlaces Rápidos</h3>
                     <ul class="footer-menu">
-                        <li><a href="#quienes-somos" class="footer-link" data-scroll="quienes-somos">Quiénes Somos</a></li>
+
                         <li><a href="#servicios" class="footer-link" data-scroll="servicios">Servicios</a></li>
                         <li><a href="#formacion" class="footer-link" data-scroll="formacion">Formación</a></li>
-                        <li><a href="index2.html" class="footer-link">Doctor Honoris Causa</a></li>
-                        <li><a href="index3.html" class="footer-link">Certificaciones Especiales</a></li>
+                        <!-- Referencias a doctor.html y document.html eliminadas -->
                     </ul>
                 </div>
                 
@@ -403,8 +413,7 @@
                     <ul class="footer-menu">
                         <li><a href="#" class="footer-link" data-modal="modal-diplomados">Diplomados</a></li>
                         <li><a href="#" class="footer-link" data-modal="modal-cursos">Cursos de Especialización</a></li>
-                        <li><a href="index2.html" class="footer-link">Reconocimientos</a></li>
-                        <li><a href="index3.html" class="footer-link">Certificaciones</a></li>
+                        <!-- Referencias a doctor.html y document.html eliminadas -->
                     </ul>
                 </div>
                 
@@ -463,7 +472,7 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p class="footer-copyright">
-                        © 2024 ARCIS - Academia de Investigación en Riesgos, Inteligencia y Seguridad. Todos los derechos reservados.
+                        © 2025 ARCIS - Academia de Investigación en Riesgos, Inteligencia y Seguridad. Todos los derechos reservados.
                     </p>
                     
                     <div class="footer-bottom-links">

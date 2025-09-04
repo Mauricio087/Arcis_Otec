@@ -1,0 +1,112 @@
+/* Estilos para la página Doctor Honoris Causa */
+
+/* Estilos para el encabezado de sección */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Estilos para la sección principal */
+#doctor-honoris {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+/* Estilos para la información del doctor */
+.doctor-info {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-description {
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.doctor-description p {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Estilos para las secciones */
+.doctor-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.doctor-section:last-child {
+    border-bottom: none;
+}
+
+.doctor-subtitle {
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Estilos para las listas */
+.doctor-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.doctor-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.doctor-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background-color: #0056b3;
+    border-radius: 50%;
+}
+
+/* Estilos para los botones de acción */
+.doctor-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .doctor-info {
+        padding: 1.5rem;
+    }
+    
+    .doctor-actions {
+        flex-direction: column;
+    }
+    
+    .doctor-actions .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#7c3aed"/>
+  <rect x="100" y="60" width="200" height="180" fill="white" rx="10"/>
+  <rect x="120" y="80" width="160" height="12" fill="#e5e7eb" rx="6"/>
+  <rect x="120" y="110" width="120" height="12" fill="#e5e7eb" rx="6"/>
+  <rect x="120" y="140" width="140" height="12" fill="#e5e7eb" rx="6"/>
+  <circle cx="130" cy="170" r="6" fill="#7c3aed"/>
+  <circle cx="130" cy="190" r="6" fill="#e5e7eb"/>
+  <circle cx="130" cy="210" r="6" fill="#e5e7eb"/>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Encuestas</text>
+</svg>

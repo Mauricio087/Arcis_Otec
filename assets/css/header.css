@@ -47,9 +47,10 @@
     text-decoration: none;
 }
 
-.brand-logo {
-    width: 48px;
-    height: 48px;
+.brand-logo,
+.logo-img {
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     border-radius: var(--border-radius-md);
 }
@@ -181,18 +182,6 @@
     font-size: var(--font-size-sm);
 }
 
-.nav-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--color-text-on-primary);
-    transform: translateY(-2px);
-    text-decoration: none;
-}
-
-.nav-link.active {
-    background: var(--color-accent);
-    color: var(--color-text-on-accent);
-}
-
 .dropdown-link:hover {
     background: rgba(255, 255, 255, 0.1);
     color: var(--color-text-on-primary);
@@ -271,8 +260,36 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: var(--spacing-md);
+    }
+    
     .mobile-toggle {
         display: flex;
+    }
+    
+    .navbar-toggle {
+        display: flex !important;
+    }
+    
+    /* Asegurar que navbar-actions sea visible en móvil */
+    .navbar-actions {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Ocultar botón de WhatsApp en móvil */
+    .navbar-actions .btn-primary {
+        display: none !important;
+    }
+    
+    /* Forzar visibilidad del botón hamburguesa */
+    .navbar-actions .navbar-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .navbar-menu {
@@ -325,9 +342,10 @@
         padding: 0 var(--spacing-md);
     }
     
-    .brand-logo {
-        width: 40px;
-        height: 40px;
+    .brand-logo,
+    .logo-img {
+        width: 50px;
+        height: 50px;
     }
     
     .brand-text {
@@ -376,10 +394,61 @@
     width: 100%;
 }
 
+/* ===== ESTILOS NAVBAR-ACTIONS ===== */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/* Ocultar navbar-toggle por defecto en desktop */
+.navbar-actions .navbar-toggle {
+    display: none;
+}
+
+/* ===== ESTILOS NAVBAR-TOGGLE ===== */
+.navbar-toggle {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-white);
+    border-radius: 2px;
+    transition: var(--transition-all);
+    transform-origin: center;
+    margin: 2px 0;
+}
+
+.navbar-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 /* ===== ACCESIBILIDAD ===== */
 .nav-link:focus,
 .brand-link:focus,
-.mobile-toggle:focus {
+.mobile-toggle:focus,
+.navbar-toggle:focus {
     outline: 2px solid var(--color-white);
     outline-offset: 2px;
 }
@@ -400,6 +469,12 @@
     .nav-link:hover,
     .brand-link:hover {
         transform: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        margin-left: var(--spacing-lg);
     }
 }
 

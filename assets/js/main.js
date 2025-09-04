@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inicializar componentes principales
     initNavigation();
+    initNavbarToggle();
     initScrollEffects();
     initFloatingButtons();
     initModals();
@@ -153,32 +154,33 @@ function createHeaderStructure() {
     const header = document.getElementById('header');
     if (!header) return;
     
-    header.innerHTML = `
-        <nav class="navbar">
-            <div class="logo-container">
-                <img src="./assets/img/logo/logo.png" alt="ARCIS Logo" class="logo" onerror="this.src='./assets/img/logo/logo.jpg'">
-                <div>
-                    <a href="#" class="logo-text">ARCIS</a>
-                    <div class="logo-subtitle">Academia de Investigación en Riesgos, Inteligencia y Seguridad</div>
+    // Solo crear la estructura si el header está completamente vacío
+    // Esto evita sobrescribir la navegación existente en páginas como doctor.html y document.html
+    if (header.innerHTML.trim() === '') {
+        header.innerHTML = `
+            <nav class="navbar">
+                <div class="logo-container">
+                    <img src="./assets/img/logo/logo.png" alt="ARCIS Logo" class="logo" onerror="this.src='./assets/img/logo/logo.jpg'">
+                    <div>
+                        <a href="index.html" class="logo-text">ARCIS</a>
+                        <div class="logo-subtitle">Academia de Investigación en Riesgos, Inteligencia y Seguridad</div>
+                    </div>
                 </div>
-            </div>
-            
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#hero" class="nav-link active">Inicio</a></li>
-                <li class="nav-item"><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
-                <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li class="nav-item"><a href="#formacion" class="nav-link">Formación</a></li>
-                <li class="nav-item"><a href="index2.html" class="nav-link">Doctor Honoris Causa</a></li>
-                <li class="nav-item"><a href="index3.html" class="nav-link">Certificaciones</a></li>
-            </ul>
-            
-            <button class="hamburger" aria-label="Menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    `;
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html#hero" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="index.html#formacion" class="nav-link">Formación</a></li>
+                </ul>
+                
+                <button class="hamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        `;
+    }
 }
 
 function toggleMobileMenu() {
@@ -367,7 +369,7 @@ function handleWhatsAppClick(e) {
 }
 
 function getCurrentSection() {
-    const sections = ['hero', 'quienes-somos', 'servicios', 'formacion'];
+    const sections = ['hero', 'servicios', 'formacion'];
     const scrollTop = window.pageYOffset;
     
     for (let section of sections) {
@@ -561,6 +563,30 @@ window.ARCIS = {
     closeModal,
     CONFIG
 };
+
+// ===== FUNCIONALIDAD NAVBAR TOGGLE =====
+function initNavbarToggle() {
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+    
+    if (navbarToggle && navbarMenu) {
+        navbarToggle.addEventListener('click', function() {
+            navbarToggle.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        const navLinks = navbarMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbarToggle.classList.remove('active');
+                navbarMenu.classList.remove('active');
+            });
+        });
+        
+        console.log('🔘 Navbar toggle inicializado');
+    }
+}
 
 // ===== LOG DE INICIALIZACIÓN =====
 console.log('%c🎯 ARCIS - Academia de Investigación en Riesgos, Inteligencia y Seguridad', 'color: #1a365d; font-size: 16px; font-weight: bold;');
