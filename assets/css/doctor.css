@@ -1,5 +1,12 @@
 /* Estilos para la página Doctor Honoris Causa */
 
+/* Hero secundario específico para doctor.html */
+.hero-secondary {
+    padding: 100px 0 var(--spacing-sm) 0;
+    min-height: 300px;
+    height: 300px;
+}
+
 /* Estilos para el encabezado de sección */
 .section-header {
     text-align: center;
