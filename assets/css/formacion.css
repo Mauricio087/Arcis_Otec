@@ -4,6 +4,45 @@
     padding: var(--section-padding) 0;
     background: var(--bg-white);
     position: relative;
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+}
+
+/* Estilos para el header de formación */
+.formacion .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.formacion .section-title {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+}
+
+.formacion .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.formacion .section-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: center;
 }
 
 .formacion::before {
@@ -38,6 +77,12 @@
     flex-direction: column;
 }
 
+/* Layout horizontal para tarjetas específicas */
+.formacion-card.cursos {
+    flex-direction: row;
+    align-items: stretch;
+}
+
 .formacion-card:hover {
     transform: translateY(-12px);
     box-shadow: var(--shadow-hover);
@@ -49,6 +94,14 @@
     height: 250px;
     overflow: hidden;
     background: var(--gradient-primary);
+}
+
+/* Imagen en layout horizontal */
+.formacion-card.cursos .formacion-image {
+    width: 40%;
+    height: auto;
+    min-height: 100%;
+    align-self: stretch;
 }
 
 .formacion-image img {
@@ -113,6 +166,20 @@
     flex-direction: column;
 }
 
+/* Wrapper para layout horizontal */
+.formacion-card.cursos .formacion-content-wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.formacion-card.cursos .formacion-content {
+    padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-md) var(--spacing-xl);
+    flex: 1;
+}
+
 .formacion-title {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
@@ -161,6 +228,13 @@
     display: flex;
     gap: var(--spacing-sm);
     margin-top: auto;
+}
+
+/* Acciones en layout horizontal */
+.formacion-card.cursos .formacion-actions {
+    padding: var(--spacing-md) var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
+    justify-content: center;
+    margin-top: 0;
 }
 
 .formacion-actions .btn {
