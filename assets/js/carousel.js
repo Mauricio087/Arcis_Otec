@@ -105,7 +105,7 @@ class ARCISCarousel {
             {
                 titulo: 'Asesoría Estratégica',
                 descripcion: 'Consultoría especializada en gestión de riesgos, inteligencia y seguridad para organizaciones públicas y privadas.',
-                imagen: './assets/img/servicios/asesoria.jpg',
+                imagen: './assets/img/galeria/asesoria_estrategica.jpg',
                 icono: 'strategy',
                 ctaText: 'Solicitar Asesoría',
                 ctaAction: 'asesoria',
@@ -114,7 +114,7 @@ class ARCISCarousel {
             {
                 titulo: 'Investigación Especializada',
                 descripcion: 'Estudios e investigaciones aplicadas en seguridad pública, criminología y análisis de riesgos.',
-                imagen: './assets/img/servicios/investigacion.jpg',
+                imagen: './assets/img/galeria/investigacion especializada.jpg',
                 icono: 'research',
                 ctaText: 'Conocer Más',
                 ctaAction: 'investigacion',
@@ -123,7 +123,7 @@ class ARCISCarousel {
             {
                 titulo: 'Encuestas y Diagnósticos',
                 descripcion: 'Evaluaciones especializadas para medir percepción de seguridad y diagnósticos situacionales.',
-                imagen: './assets/img/servicios/encuestas.jpg',
+                imagen: './assets/img/galeria/encuestas y diagnosticos.jpg',
                 icono: 'survey',
                 ctaText: 'Solicitar Diagnóstico',
                 ctaAction: 'encuestas',
@@ -132,7 +132,7 @@ class ARCISCarousel {
             {
                 titulo: 'Formación Académica',
                 descripcion: 'Programas de capacitación y formación profesional en seguridad, inteligencia y gestión de riesgos.',
-                imagen: './assets/img/servicios/formacion.jpg',
+                imagen: './assets/img/galeria/formacion_academica.jpg',
                 icono: 'education',
                 ctaText: 'Ver Programas',
                 ctaAction: 'formacion',
@@ -141,7 +141,7 @@ class ARCISCarousel {
             {
                 titulo: 'Diplomado en Seguridad Pública',
                 descripcion: 'Formación integral en políticas públicas de seguridad, prevención del delito y gestión de crisis.',
-                imagen: './assets/img/formacion/diplomados.jpg',
+                imagen: './assets/img/galeria/diplomado_en_seguridad_publica.jpg',
                 icono: 'education',
                 ctaText: 'Ver Diplomados',
                 ctaAction: 'diplomados',
@@ -152,7 +152,7 @@ class ARCISCarousel {
             {
                 titulo: 'Diplomado en Inteligencia Criminal',
                 descripcion: 'Especialización en análisis de información, investigación criminal y técnicas avanzadas de inteligencia.',
-                imagen: './assets/img/formacion/diplomados.jpg',
+                imagen: './assets/img/galeria/diplomado en inteligencia criminal.jpg',
                 icono: 'research',
                 ctaText: 'Ver Diplomados',
                 ctaAction: 'diplomados',
