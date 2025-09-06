@@ -28,15 +28,14 @@ const CONFIG = {
 
 // ===== INICIALIZACIÓN =====
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 ARCIS - Inicializando aplicación...');
+    console.log('🚀 Iniciando ARCIS...');
     
-    // Inicializar componentes principales
+    // Inicializar componentes
     initNavigation();
-    initNavbarToggle();
     initScrollEffects();
-    initFloatingButtons();
+    initAnimations();
     initModals();
-    initLazyLoading();
+    initForms();
     initAnimations();
     
     console.log('✅ ARCIS - Aplicación inicializada correctamente');
@@ -45,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // ===== NAVEGACIÓN =====
 function initNavigation() {
     const header = document.getElementById('header');
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger, .navbar-toggle');
+    const navMenu = document.querySelector('.nav-menu, .navbar-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     
     if (!header) return;
@@ -184,21 +183,23 @@ function createHeaderStructure() {
 }
 
 function toggleMobileMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger, .navbar-toggle');
+    const navMenu = document.querySelector('.nav-menu, .navbar-menu');
     
     if (hamburger && navMenu) {
+        const isActive = navMenu.classList.contains('active');
+        
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
         
         // Prevenir scroll del body cuando el menú está abierto
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        document.body.style.overflow = !isActive ? 'hidden' : '';
     }
 }
 
 function closeMobileMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger, .navbar-toggle');
+    const navMenu = document.querySelector('.nav-menu, .navbar-menu');
     
     if (hamburger && navMenu) {
         hamburger.classList.remove('active');
@@ -565,28 +566,7 @@ window.ARCIS = {
 };
 
 // ===== FUNCIONALIDAD NAVBAR TOGGLE =====
-function initNavbarToggle() {
-    const navbarToggle = document.getElementById('navbar-toggle');
-    const navbarMenu = document.querySelector('.navbar-menu');
-    
-    if (navbarToggle && navbarMenu) {
-        navbarToggle.addEventListener('click', function() {
-            navbarToggle.classList.toggle('active');
-            navbarMenu.classList.toggle('active');
-        });
-        
-        // Cerrar menú al hacer clic en un enlace
-        const navLinks = navbarMenu.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navbarToggle.classList.remove('active');
-                navbarMenu.classList.remove('active');
-            });
-        });
-        
-        console.log('🔘 Navbar toggle inicializado');
-    }
-}
+// Función eliminada - se usa toggleMobileMenu en su lugar
 
 // ===== LOG DE INICIALIZACIÓN =====
 console.log('%c🎯 ARCIS - Academia de Investigación en Riesgos, Inteligencia y Seguridad', 'color: #1a365d; font-size: 16px; font-weight: bold;');

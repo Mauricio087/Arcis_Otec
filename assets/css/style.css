@@ -309,6 +309,11 @@ li {
     cursor: pointer;
     transition: var(--transition-normal);
     box-shadow: var(--shadow-sm);
+    /* Mejoras para dispositivos táctiles */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px;
+    min-width: 44px;
 }
 
 .btn-primary {
@@ -426,10 +431,12 @@ li {
         --font-size-4xl: 2rem;      /* 32px */
         --font-size-3xl: 1.5rem;    /* 24px */
         --font-size-2xl: 1.25rem;   /* 20px */
+        --font-size-xl: 1.125rem;   /* 18px */
+        --font-size-lg: 1rem;       /* 16px */
     }
     
     .container {
-        padding: 0 var(--spacing-sm);
+        padding: 0 var(--spacing-md);
     }
     
     section {
@@ -438,7 +445,23 @@ li {
     
     .btn {
         width: 100%;
-        margin-bottom: var(--spacing-sm);
+        max-width: 300px;
+        margin: 0 auto var(--spacing-sm) auto;
+        display: block;
+    }
+    
+    /* Mejorar legibilidad del texto */
+    p, .text-base {
+        font-size: var(--font-size-base);
+        line-height: 1.6;
+    }
+    
+    h1, .text-4xl {
+        line-height: 1.2;
+    }
+    
+    h2, .text-3xl {
+        line-height: 1.3;
     }
 }
 
@@ -446,10 +469,36 @@ li {
     :root {
         --font-size-4xl: 1.75rem;   /* 28px */
         --font-size-3xl: 1.375rem;  /* 22px */
+        --font-size-2xl: 1.125rem;  /* 18px */
+        --font-size-xl: 1rem;       /* 16px */
+        --font-size-lg: 0.9rem;     /* 14.4px */
     }
     
     .container {
-        padding: 0 var(--spacing-xs);
+        padding: 0 var(--spacing-sm);
+    }
+    
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    /* Espaciado más compacto en móviles pequeños */
+    .btn {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+        min-height: 48px;
+        /* Área de toque más grande en móviles */
+    }
+    
+    /* Mejorar interactividad táctil */
+    .btn:active {
+        transform: scale(0.98);
+    }
+    
+    .nav-link, .dropdown-toggle {
+        min-height: 44px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
 }
 

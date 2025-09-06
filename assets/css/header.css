@@ -330,6 +330,49 @@
         background: rgba(255, 255, 255, 0.1);
         transform: translateX(4px);
     }
+    
+    /* Estilos específicos para dropdowns en móvil */
+    .dropdown {
+        position: relative;
+    }
+    
+    .dropdown-menu {
+        position: static !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: var(--border-radius-lg) !important;
+        margin-top: var(--spacing-sm) !important;
+        padding: var(--spacing-sm) !important;
+        box-shadow: none !important;
+        transform: none !important;
+        opacity: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: all 0.3s ease !important;
+        visibility: hidden !important;
+    }
+    
+    .dropdown-menu.show {
+        opacity: 1 !important;
+        max-height: 200px !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+    
+    .dropdown-link {
+        padding: var(--spacing-sm) var(--spacing-md) !important;
+        margin: var(--spacing-xs) 0 !important;
+        border-radius: var(--border-radius-md) !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        transition: all 0.2s ease !important;
+        color: var(--color-text-on-primary) !important;
+    }
+    
+    .dropdown-link:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+        transform: translateX(2px) !important;
+        color: var(--color-text-on-primary) !important;
+    }
 }
 
 @media (max-width: 480px) {
