@@ -208,7 +208,42 @@
     width: 100%;
 }
 
-/* Indicador de scroll eliminado */
+/* Indicador de scroll */
+.hero-scroll-indicator {
+    position: relative;
+    margin-top: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.scroll-arrow {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: arrowPulse 2s ease-in-out infinite;
+}
+
+.scroll-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.scroll-arrow svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text-white);
+    transition: all 0.3s ease;
+}
 
 /* Animaciones */
 @keyframes fadeInUp {
@@ -290,11 +325,27 @@
         gap: var(--spacing-sm);
     }
     
+    .hero-actions {
+        margin-bottom: var(--spacing-xl);
+    }
+    
     .hero-actions .btn {
         width: 100%;
         max-width: 280px;
         padding: var(--spacing-sm) var(--spacing-lg);
         font-size: var(--font-size-base);
+    }
+    
+    .hero-scroll-indicator {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: var(--spacing-xl);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        clear: both;
     }
     
     .scroll-arrow {
