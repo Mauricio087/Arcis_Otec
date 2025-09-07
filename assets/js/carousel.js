@@ -18,6 +18,7 @@ class ARCISCarousel {
             showControls: true,
             loop: true,
             touchEnabled: true,
+            initializeEvents: true,
             ...options
         };
         
@@ -46,8 +47,11 @@ class ARCISCarousel {
     
     init() {
         this.createCarouselStructure();
-        this.setupEventListeners();
-        this.startAutoplay();
+        
+        if (this.config.initializeEvents) {
+            this.setupEventListeners();
+            this.startAutoplay();
+        }
         
         console.log('🎠 Carrusel ARCIS inicializado');
     }
@@ -527,22 +531,71 @@ class ARCISCarousel {
 }
 
 // ===== INICIALIZACIÓN AUTOMÁTICA =====
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar carrusel de servicios si existe el contenedor
+// ===== FUNCIÓN PARA DETECTAR VISTA MÓVIL =====
+function isMobileView() {
+    return window.innerWidth <= 768;
+}
+
+// ===== FUNCIÓN PARA INICIALIZAR/DESTRUIR CARRUSEL SEGÚN VISTA =====
+function handleCarouselResponsive() {
     const serviciosCarousel = document.getElementById('servicios-carousel');
-    if (serviciosCarousel) {
-        window.arcisServiciosCarousel = new ARCISCarousel('#servicios-carousel', {
-            autoplay: true,
-            autoplayInterval: 6000,
-            pauseOnHover: true,
-            showIndicators: true,
-            showControls: true,
-            loop: true,
-            touchEnabled: true
+    if (!serviciosCarousel) return;
+    
+    // Siempre crear la estructura HTML si no existe
+    if (!serviciosCarousel.querySelector('.carousel-wrapper')) {
+        const tempCarousel = new ARCISCarousel('#servicios-carousel', {
+            autoplay: false,
+            showIndicators: false,
+            showControls: false,
+            loop: false,
+            touchEnabled: false,
+            initializeEvents: false
         });
-        
-        console.log('🎠 Carrusel de servicios ARCIS inicializado');
     }
+    
+    if (isMobileView()) {
+        // En vista móvil: destruir carrusel si existe y mostrar como lista
+        if (window.arcisServiciosCarousel) {
+            // Detener autoplay y limpiar eventos
+            window.arcisServiciosCarousel.stopAutoplay();
+            window.arcisServiciosCarousel = null;
+        }
+        
+        // Asegurar que todas las slides sean visibles
+        const track = serviciosCarousel.querySelector('.carousel-track');
+        if (track) {
+            track.style.transform = 'none';
+        }
+        
+        console.log('📱 Vista móvil: Carrusel deshabilitado, mostrando como lista');
+    } else {
+        // En vista desktop: inicializar carrusel si no existe
+        if (!window.arcisServiciosCarousel) {
+            window.arcisServiciosCarousel = new ARCISCarousel('#servicios-carousel', {
+                autoplay: true,
+                autoplayInterval: 6000,
+                pauseOnHover: true,
+                showIndicators: true,
+                showControls: true,
+                loop: true,
+                touchEnabled: true
+            });
+            
+            console.log('🖥️ Vista desktop: Carrusel de servicios ARCIS inicializado');
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar según la vista actual
+    handleCarouselResponsive();
+    
+    // Escuchar cambios de tamaño de ventana
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(handleCarouselResponsive, 250);
+    });
 });
 
 // ===== EXPORTAR CLASE =====

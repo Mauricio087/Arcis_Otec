@@ -754,15 +754,19 @@
     #floating-buttons {
         bottom: var(--spacing-md);
         right: var(--spacing-md);
+        z-index: 1001 !important;
     }
     
     .floating-btn {
         width: 45px;
         height: 45px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
     
     .floating-btn svg {
         width: 20px;
         height: 20px;
+        pointer-events: none;
     }
 }

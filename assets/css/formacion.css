@@ -326,33 +326,102 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .formacion {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .formacion .section-header {
+        margin-bottom: var(--spacing-2xl);
+        padding: 0 var(--spacing-md);
+    }
+    
+    .formacion .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .formacion .section-subtitle {
+        font-size: var(--font-size-lg);
+        padding: 0 var(--spacing-sm);
+    }
+    
     .formacion-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-xl) !important;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .formacion-card {
+        margin: 0 !important;
+        border-radius: var(--border-radius-md) !important;
+        box-shadow: var(--shadow-md) !important;
+    }
+    
+    .formacion-card.cursos {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    
+    .formacion-card.cursos .formacion-image {
+        width: 100% !important;
+        height: 220px !important;
+        min-height: auto !important;
+    }
+    
+    .formacion-card.cursos .formacion-content-wrapper {
+        width: 100% !important;
+        min-height: auto !important;
     }
     
     .formacion-image {
-        height: 200px;
+        height: 220px !important;
     }
     
     .formacion-content {
-        padding: var(--spacing-lg);
+        padding: var(--spacing-lg) !important;
+        text-align: center;
+    }
+    
+    .formacion-card.cursos .formacion-content {
+        padding: var(--spacing-lg) !important;
     }
     
     .formacion-title {
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-xl) !important;
+        margin-bottom: var(--spacing-md) !important;
+        text-align: center;
     }
     
     .formacion-description {
-        font-size: var(--font-size-sm);
+        font-size: var(--font-size-base) !important;
+        line-height: 1.6 !important;
+        margin-bottom: var(--spacing-lg) !important;
+        text-align: center;
+    }
+    
+    .formacion-features {
+        justify-content: center !important;
+        gap: var(--spacing-sm) !important;
+        margin-bottom: var(--spacing-lg) !important;
     }
     
     .formacion-actions {
-        flex-direction: column;
+        flex-direction: column !important;
+        gap: var(--spacing-sm) !important;
+        align-items: center !important;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .formacion-actions .btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        justify-content: center !important;
+        padding: var(--spacing-md) var(--spacing-lg) !important;
+        font-size: var(--font-size-base) !important;
     }
     
     .feature-item {
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-sm) !important;
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
     }
 }
 

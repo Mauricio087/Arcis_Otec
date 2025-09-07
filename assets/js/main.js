@@ -28,17 +28,17 @@ const CONFIG = {
 
 // ===== INICIALIZACIÓN =====
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Iniciando ARCIS...');
+    console.log('🚀 Inicializando ARCIS...');
     
-    // Inicializar componentes
+    // Inicializar funcionalidades principales
     initNavigation();
     initScrollEffects();
+    initFloatingButtons();
     initAnimations();
     initModals();
-    initForms();
-    initAnimations();
+    // initForms(); // Función no implementada
     
-    console.log('✅ ARCIS - Aplicación inicializada correctamente');
+    console.log('✅ ARCIS inicializado correctamente');
 });
 
 // ===== NAVEGACIÓN =====
