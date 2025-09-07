@@ -471,11 +471,11 @@
     }
     
     .carousel-slide {
-        padding: var(--spacing-md);
+        padding: var(--spacing-sm);
     }
     
     .service-card {
-        max-width: 95%;
+        max-width: calc(100% - var(--spacing-lg));
         padding: var(--spacing-lg);
         margin: 0 auto;
     }
@@ -500,32 +500,51 @@
 
 @media (max-width: 576px) {
     .servicios-carousel {
-        margin: 0 var(--spacing-sm);
+        margin: 0;
         border-radius: var(--border-radius-lg);
     }
     
     .carousel-slide {
-        padding: var(--spacing-sm);
+        padding: var(--spacing-xs);
     }
     
     .service-card {
-        max-width: 100%;
-        margin: 0;
-        padding: var(--spacing-md);
+        max-width: calc(100% - var(--spacing-sm));
+        margin: 0 auto;
+        padding: var(--spacing-sm);
+        min-height: auto;
     }
     
     .service-image {
-        height: 160px;
-        margin-bottom: var(--spacing-sm);
+        height: 120px;
+        margin-bottom: var(--spacing-xs);
     }
     
     .slide-title {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .service-content {
+        padding: var(--spacing-xs);
+    }
+    
+    .service-content h3 {
+        font-size: var(--font-size-md);
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .service-content p {
+        font-size: var(--font-size-sm);
+        line-height: 1.4;
+        margin-bottom: var(--spacing-xs);
     }
     
     .slide-cta {
         width: 100%;
         justify-content: center;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-sm);
     }
     
     .carousel-controls {
