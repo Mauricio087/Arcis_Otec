@@ -229,6 +229,7 @@
 .service-cta {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-sm);
     padding: var(--spacing-sm) var(--spacing-lg);
     background: var(--gradient-primary);
@@ -241,6 +242,7 @@
     transition: var(--transition-normal);
     cursor: pointer;
     box-shadow: var(--shadow-sm);
+    line-height: 1;
 }
 
 .service-cta:hover {
@@ -254,6 +256,8 @@
     width: 16px;
     height: 16px;
     fill: currentColor;
+    flex-shrink: 0;
+    vertical-align: middle;
 }
 
 /* Estilos para las tarjetas de diplomados en el carrusel */
