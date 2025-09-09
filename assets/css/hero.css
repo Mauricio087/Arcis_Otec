@@ -110,6 +110,7 @@
     line-height: 0.9;
     color: #ffffff !important;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    margin-top: 8px;
     margin-bottom: var(--spacing-sm);
     /* Color sólido para mejor contraste sobre fondo blanco */
     color: var(--color-dark);
