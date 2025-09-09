@@ -1,0 +1,215 @@
+/* Certificaciones Styles */
+.certificacion-section {
+    margin-bottom: 4rem;
+}
+
+.certificacion-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transition: var(--transition-base);
+    border: 1px solid var(--color-gray-200);
+}
+
+.certificacion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.certificacion-header {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-white);
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.certificacion-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.certificacion-icon {
+    display: none;
+}
+
+.certificacion-icon svg {
+    display: none;
+}
+
+.certificacion-title {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.certificacion-content {
+    padding: 2rem;
+}
+
+.certificacion-description,
+.certificacion-objetivos,
+.certificacion-requisitos {
+    margin-bottom: 2rem;
+}
+
+.certificacion-description h3,
+.certificacion-objetivos h3,
+.certificacion-requisitos h3 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certificacion-description h3::before {
+    content: '📋';
+    font-size: 1.2rem;
+}
+
+.certificacion-objetivos h3::before {
+    content: '🎯';
+    font-size: 1.2rem;
+}
+
+.certificacion-requisitos h3::before {
+    content: '✅';
+    font-size: 1.2rem;
+}
+
+.certificacion-description p {
+    color: var(--color-gray-700);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.certificacion-objetivos ul,
+.certificacion-requisitos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certificacion-objetivos li,
+.certificacion-requisitos li {
+    color: var(--color-gray-700);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.certificacion-objetivos li::before {
+    content: '▶';
+    color: var(--color-primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.certificacion-requisitos li::before {
+    content: '✓';
+    color: var(--color-success);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.certificacion-actions {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.certificacion-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.certificacion-actions .btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.certificacion-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificacion-header {
+        padding: 1.5rem;
+    }
+    
+    .certificacion-title {
+        font-size: 1.25rem;
+    }
+    
+    .certificacion-content {
+        padding: 1.5rem;
+    }
+    
+    .certificacion-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .certificacion-icon svg {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .certificacion-actions .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificacion-section {
+        margin-bottom: 2rem;
+    }
+    
+    .certificacion-header {
+        padding: 1rem;
+    }
+    
+    .certificacion-title {
+        font-size: 1.1rem;
+    }
+    
+    .certificacion-content {
+        padding: 1rem;
+    }
+    
+    .certificacion-objetivos li,
+    .certificacion-requisitos li {
+        font-size: 0.9rem;
+    }
+}

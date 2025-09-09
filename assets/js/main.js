@@ -16,7 +16,9 @@ const CONFIG = {
         encuestas: 'Hola, me interesa el servicio de Encuestas y Diagnósticos. Me gustaría recibir más información.',
         formacion: 'Hola, me interesa la Formación Académica y Profesional. Me gustaría recibir más información.',
         diplomados: 'Hola, me interesan los Diplomados de ARCIS. Me gustaría recibir más información.',
-        cursos: 'Hola, me interesan los Cursos de Especialización de ARCIS. Me gustaría recibir más información.'
+        cursos: 'Hola, me interesan los Cursos de Especialización de ARCIS. Me gustaría recibir más información.',
+        'certificacion-direccion': 'Hola, me interesa la Certificación Especial en Dirección de Seguridad Pública de ARCIS. Me gustaría recibir más información sobre requisitos, contenido y fechas.',
+        'certificacion-inspeccion': 'Hola, me interesa la Certificación Especial en Inspección Municipal de Seguridad Pública de ARCIS. Me gustaría recibir más información sobre requisitos, contenido y fechas.'
     },
     
     // Configuración del carrusel
@@ -444,6 +446,14 @@ function initModals() {
         
         if (e.target.matches('.modal-close') || e.target.matches('.modal-overlay')) {
             closeModal();
+        }
+        
+        // Manejar botones de WhatsApp con data-whatsapp
+        if (e.target.matches('[data-whatsapp]')) {
+            e.preventDefault();
+            const action = e.target.getAttribute('data-whatsapp');
+            const message = CONFIG.whatsappMessages[action] || CONFIG.whatsappMessages.general;
+            openWhatsApp(message);
         }
     });
     
