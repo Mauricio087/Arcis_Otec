@@ -19,7 +19,7 @@ function initWhatsAppButtons() {
     whatsappButtons.forEach(button => {
         button.addEventListener('click', function() {
             const message = encodeURIComponent('Hola, me gustaría obtener información sobre el Doctor Honoris Causa en Seguridad Pública.');
-            const phoneNumber = '56912345678'; // Reemplazar con el número real
+            const phoneNumber = '56958321058'; // Reemplazar con el número real
             
             window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
         });

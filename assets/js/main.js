@@ -6,7 +6,7 @@ let ticking = false;
 // ===== CONFIGURACIÓN =====
 const CONFIG = {
     // Números de contacto (cambiar según necesidad)
-    whatsappNumber: '+56912345678', // Número de WhatsApp de ARCIS
+    whatsappNumber: '+56958321058', // Número de WhatsApp de ARCIS
     
     // Mensajes predeterminados para WhatsApp
     whatsappMessages: {
