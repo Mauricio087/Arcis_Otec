@@ -799,11 +799,17 @@
         grid-template-columns: 1fr;
         gap: var(--spacing-2xl);
         padding: var(--spacing-3xl) 0 var(--spacing-xl) 0;
+        text-align: center;
     }
     
     .footer-nav-columns {
         flex-direction: column;
         gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .footer-section {
+        text-align: center;
     }
     
     .footer-bottom {
@@ -840,9 +846,16 @@
     .footer-content {
         padding: var(--spacing-2xl) 0 var(--spacing-lg) 0;
         gap: var(--spacing-xl);
+        text-align: center;
     }
     
-
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-nav-columns {
+        text-align: center;
+    }
     
     .footer-logo-container {
         flex-direction: column;
@@ -860,10 +873,25 @@
     .footer-title {
         font-size: var(--font-size-md);
         margin-bottom: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .contact-info {
+        align-items: center;
     }
     
     .newsletter-section {
         padding: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        justify-content: center;
+    }
+    
+    .footer-contact {
+        text-align: center;
+        align-items: center;
     }
     
     .contact-item {
