@@ -878,6 +878,10 @@
     
     .contact-info {
         align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        width: 100%;
     }
     
     .newsletter-section {
@@ -899,10 +903,35 @@
         align-items: center;
         text-align: center;
         gap: var(--spacing-sm);
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        min-height: 80px;
+        justify-content: center;
     }
     
     .contact-item svg {
         margin-top: 0;
+    }
+    
+    .contact-details {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .contact-details strong,
+    .contact-details span,
+    .contact-link {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    
+    .contact-item > span,
+    .contact-item > .contact-link {
+        text-align: center;
+        width: 100%;
     }
     
     .footer-social {
