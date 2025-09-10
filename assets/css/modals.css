@@ -71,6 +71,7 @@
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
     margin: 0;
+    color: var(--color-accent);
 }
 
 .modal-icon {
@@ -193,10 +194,12 @@
     color: var(--color-white);
     margin: 0 0 var(--spacing-sm) 0;
     line-height: 1.3;
+    text-align: center;
 }
 
 .program-content {
     padding: var(--spacing-lg);
+    text-align: center;
 }
 
 .program-description {
@@ -204,26 +207,27 @@
     line-height: 1.6;
     margin-bottom: var(--spacing-lg);
     font-weight: var(--font-weight-medium);
+    text-align: center;
 }
 
 .program-features {
     list-style: none;
     padding: 0;
     margin: 0 0 var(--spacing-lg) 0;
+    text-align: center;
 }
 
 .program-features li {
     padding: var(--spacing-xs) 0;
     color: var(--color-white);
     position: relative;
-    padding-left: var(--spacing-lg);
     font-weight: var(--font-weight-medium);
+    display: inline-block;
+    margin: 0 var(--spacing-sm);
 }
 
 .program-features li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
+    content: '✓ ';
     color: var(--color-success);
     font-weight: var(--font-weight-bold);
 }
@@ -232,6 +236,7 @@
     display: flex;
     gap: var(--spacing-sm);
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* ===== GRID DE CURSOS ===== */
@@ -331,12 +336,12 @@
 .course-details svg {
     width: 16px;
     height: 16px;
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 .course-price {
     font-weight: var(--font-weight-semibold);
-    color: var(--color-primary) !important;
+    color: var(--color-accent) !important;
 }
 
 /* ===== FOOTER DEL MODAL ===== */
@@ -392,12 +397,12 @@
 
 .btn-outline {
     background: transparent;
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .btn-outline:hover {
-    background: var(--color-primary);
+    background: var(--color-accent);
     color: var(--color-white);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
