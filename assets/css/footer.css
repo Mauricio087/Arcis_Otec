@@ -912,6 +912,9 @@
     
     .contact-item svg {
         margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
     
     .contact-details {
